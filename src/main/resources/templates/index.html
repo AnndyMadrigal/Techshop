@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+Mi primera pagina html
+<b> es para letra negrita
+<i> es para letra italica
+<u> es para letra subrayada
+<hr> es para separar con una linea
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Techshop</title>
+        <meta charset="UTF-8">    
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        
+        
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
