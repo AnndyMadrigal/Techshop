@@ -15,14 +15,27 @@ public class Producto implements Serializable {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)//la estrategia para generar los valores de ID categoria va a ser identico a lo generado por la base de datos
     @Column(name="id_producto")
     private Long idProducto;
-    private Long idCategoria;
+    //private Long idCategoria;
     private String descripcion;
     private String detalle;
     private double precio;
     private int existencias;
     private String rutaImagen;
     private boolean activo;
+    
+    @ManyToOne
+    @JoinColumn(name="id_categoria")
+    private Categoria categoria;
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    
     public Long getIdProducto() {
         return idProducto;
     }
@@ -55,13 +68,13 @@ public class Producto implements Serializable {
         this.existencias = existencias;
     }
 
-    public Long getIdCategoria() {
-        return idCategoria;
-    }
+    //public Long getIdCategoria() {
+      //  return idCategoria;
+    //}
 
-    public void setIdCategoria(Long idCategoria) {
-        this.idCategoria = idCategoria;
-    }
+    //public void setIdCategoria(Long idCategoria) {
+      //  this.idCategoria = idCategoria;
+    //}
 
     public String getDescripcion() {
         return descripcion;
