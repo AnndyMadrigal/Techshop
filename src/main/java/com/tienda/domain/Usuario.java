@@ -53,12 +53,12 @@ public class Usuario implements Serializable {
         this.password = password;
     }
 
-    public String getNombres() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombres(String nombres) {
-        this.nombre = nombres;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellidos() {
